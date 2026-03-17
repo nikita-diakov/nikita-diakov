@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240" viewBox="0 0 1200 240" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="180" viewBox="0 0 1200 180" fill="none">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="240" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="180" gradientUnits="userSpaceOnUse">
       <stop stop-color="#07111F"/>
       <stop offset="0.55" stop-color="#0B2C66"/>
       <stop offset="1" stop-color="#0E4AA8"/>
@@ -11,7 +11,7 @@
       <stop offset="1" stop-color="#3EA6FF" stop-opacity="0.0"/>
     </linearGradient>
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
       <feMerge>
         <feMergeNode in="b"/>
         <feMergeNode in="SourceGraphic"/>
@@ -19,46 +19,50 @@
     </filter>
   </defs>
 
-  <rect width="1200" height="240" rx="20" fill="url(#bg)"/>
+  <rect width="1200" height="180" rx="18" fill="url(#bg)"/>
 
-  <!-- soft top glow -->
-  <ellipse cx="710" cy="42" rx="260" ry="70" fill="#4BB4FF" fill-opacity="0.14"/>
-  <ellipse cx="320" cy="210" rx="220" ry="55" fill="#0F6FFF" fill-opacity="0.10"/>
+  <!-- soft glow -->
+  <ellipse cx="705" cy="32" rx="250" ry="52" fill="#4BB4FF" fill-opacity="0.12"/>
+  <ellipse cx="300" cy="158" rx="210" ry="40" fill="#0F6FFF" fill-opacity="0.08"/>
 
-  <!-- subtle grid / circuit -->
-  <g opacity="0.16" stroke="#89D0FF" stroke-width="1.6">
-    <path d="M745 54H1095" />
-    <path d="M825 82H1158" />
-    <path d="M768 110H1124" />
-    <path d="M820 138H1170" />
-    <path d="M774 166H1115" />
-    <path d="M846 194H1160" />
-    <path d="M965 38V78H1014" />
-    <path d="M1052 76V118H1098" />
-    <path d="M934 104V146H981" />
-    <path d="M1008 132V174H1056" />
-    <path d="M1104 58V100H1146" />
-    <path d="M1084 154V196H1130" />
+  <!-- subtle circuits on right -->
+  <g opacity="0.15" stroke="#89D0FF" stroke-width="1.5">
+    <path d="M770 40H1100" />
+    <path d="M835 62H1160" />
+    <path d="M790 84H1128" />
+    <path d="M842 106H1170" />
+    <path d="M802 128H1135" />
+    <path d="M930 28V58H978" />
+    <path d="M1010 54V88H1056" />
+    <path d="M968 80V114H1014" />
+    <path d="M1060 40V74H1104" />
+    <path d="M1098 96V132H1142" />
   </g>
 
   <!-- nodes -->
   <g filter="url(#glow)">
-    <circle cx="889" cy="82" r="4.6" fill="#9AD8FF"/>
-    <circle cx="1014" cy="78" r="3.8" fill="#7EC8FF"/>
-    <circle cx="1098" cy="118" r="4.2" fill="#9AD8FF"/>
-    <circle cx="981" cy="146" r="3.8" fill="#7EC8FF"/>
-    <circle cx="1056" cy="174" r="4.1" fill="#9AD8FF"/>
-    <circle cx="1146" cy="100" r="3.9" fill="#7EC8FF"/>
-    <circle cx="1130" cy="196" r="4.2" fill="#9AD8FF"/>
+    <circle cx="889" cy="62" r="3.8" fill="#9AD8FF"/>
+    <circle cx="978" cy="58" r="3.2" fill="#7EC8FF"/>
+    <circle cx="1056" cy="88" r="3.4" fill="#9AD8FF"/>
+    <circle cx="1014" cy="114" r="3.2" fill="#7EC8FF"/>
+    <circle cx="1104" cy="74" r="3.3" fill="#9AD8FF"/>
+    <circle cx="1142" cy="132" r="3.5" fill="#9AD8FF"/>
   </g>
 
-  <!-- central accent line -->
-  <rect x="84" y="118" width="540" height="2.4" rx="1.2" fill="url(#line)"/>
-  <circle cx="354" cy="119.2" r="4.3" fill="#8DD1FF" filter="url(#glow)"/>
+  <!-- abstract stack icon -->
+  <g filter="url(#glow)">
+    <path d="M956 104L1030 70L1104 104L1030 138L956 104Z" fill="#E6F5FF" fill-opacity="0.9"/>
+    <path d="M972 88L1030 60L1088 88L1030 116L972 88Z" fill="#BDE6FF" fill-opacity="0.95"/>
+    <path d="M988 72L1030 52L1072 72L1030 92L988 72Z" fill="#FFFFFF"/>
+  </g>
 
-  <!-- understated title -->
+  <!-- accent line -->
+  <rect x="86" y="92" width="520" height="2.2" rx="1.1" fill="url(#line)"/>
+  <circle cx="334" cy="93.1" r="3.8" fill="#8DD1FF" filter="url(#glow)"/>
+
+  <!-- text -->
   <g fill="#F3F8FF" font-family="Segoe UI, Arial, sans-serif">
-    <text x="86" y="94" font-size="18" font-weight="600" letter-spacing="0.4">Application Support • Infrastructure • InfoSec</text>
-    <text x="86" y="156" font-size="13" font-weight="400" fill="#CFE5FF" opacity="0.88">Linux • SQL / PostgreSQL • Monitoring • Security-aware operations</text>
+    <text x="86" y="72" font-size="20" font-weight="600" letter-spacing="0.35">Application Support • Linux • Infrastructure</text>
+    <text x="86" y="128" font-size="13" font-weight="400" fill="#CFE5FF" opacity="0.9">DevOps tools • SQL • Monitoring • Security Operations</text>
   </g>
 </svg>
