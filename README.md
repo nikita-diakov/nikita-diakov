@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/github_banner_minimal.svg" alt="GitHub banner" width="100%" />
+</p>
+
 # Hi, I'm Nikita
 
 Application Support / Infrastructure Engineer with an Information Security background.
